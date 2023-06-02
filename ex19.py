@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+month_se = pd.Series(['1월', '2월', '3월', '4월'])
+income_se = pd.Series([9500, 6200, 6050, 7000])
+expenses_se = pd.Series([5040, 2350, 2300, 4800])
+df =pd.DataFrame({'월': month_se, '수입': income_se, '지출': expenses_se})
+print(df)
+print(np.argmax(income_se)) 
+print(month_se[np.argmax(income_se,)])
+print(df.max())
+print(df['수입'].max())
+print(df['수입'].mean())
+print(df.columns)
+print(df.index)
+print(f"수입의 합계 :{df['수입'].sum()}")
+print(f"지출의 합계 :{df['지출'].sum()}")
